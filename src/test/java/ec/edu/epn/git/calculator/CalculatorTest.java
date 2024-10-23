@@ -36,6 +36,12 @@ public class CalculatorTest {
         System.out.println("Test 4 Timeout");
         c.timeout(100);
     }
+    @Test
+    public void given_two_integers_when_resolveFunction_then_correctResult(){
+        System.out.println("Test 5 Resolve Function");
+        assertEquals(2,(int) c.resolveFunction(10, 5));
+
+    }
     @After
     public void tearDown() {
         System.out.println("tearDown()");

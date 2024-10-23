@@ -12,12 +12,18 @@ public class Calculator {
     public double division (int a, int b) {
         return a / b;
     }
+
     public void timeout(int time){
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+    public double resolveFunction(int a, int b) {
+        int sum = addition(a, b);
+        int difference = subtraction(a, b);
+        return division(sum - difference, b);
     }
 
     public int getAnswer() {
